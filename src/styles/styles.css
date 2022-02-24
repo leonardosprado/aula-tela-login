@@ -1,0 +1,51 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    min-height: 100vh;
+    height: 100vh;
+    background-color: #0D0D0D;
+    background-image: url('../../assets/img/bg.jpg');
+    background-size: cover;
+}
+
+.login{
+    background-color: #15004c;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px #0d0d0d34;
+
+}
+form input{
+    padding: 10px 18px;
+    outline:none;
+    border: none;
+    border-radius: 60px;
+
+}
+form input:active,:focus-visible{
+
+    outline:none;
+    border: none;
+}
+form .submit{
+    background-color: #0CF2B1;
+}
+form .profileImage{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    border-radius: 100%;
+    border: 2px solid #0CF2B1;
+    margin: 10px 20px;
+    object-fit: cover;
+
+}
+
+form #mensagem{
+    color:#fff;
+    text-align: center;
+    height: 20px;
+}
