@@ -1,0 +1,29 @@
+{
+  "name": "aula-tela-login",
+  "version": "1.0.0",
+  "description": "<div style=\"color:red\"> Para executar o projeto, basta abrir o arquivo index.html </div>",
+  "main": "./src/api/server.js",
+  "scripts": {
+    "start":"node ./src/api/server.js",
+    "dev":" ./node_modules/nodemon/bin/nodemon.js ./src/api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardosprado/aula-tela-login.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardosprado/aula-tela-login/issues"
+  },
+  "homepage": "https://github.com/leonardosprado/aula-tela-login#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.2",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20"
+  }
+}

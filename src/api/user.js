@@ -1,4 +1,11 @@
 import urlServer from '../utils/var.js';
+import db from './database/banco.js'
+console.log(db);
+
+class User {
+    
+}
+
 // Teste Commit
 const user = [
     {   
