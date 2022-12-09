@@ -1,17 +1,24 @@
 //node js
 // Não estamos usando o motor do navegador. 
 
-
+const dataBaseUrl =  process.env.DATA_BASE_URL; //Variavel de ambiente
+const dataBaseUser = process.env.MYSQL_USER ;
+const dataBasePass = process.env.MYSQL_PASSWORD ;
+const dataBaseName = process.env.MYSQL_DATABASE ;
 async function connect(){
     if(global.connection && global.connection.state !== 'disconnected')
         return global.connection;
     const mysql = require("mysql2/promise");
-    const connection = await mysql.createConnection("mysql://root:prado@localhost:3306/aula_tela_login");
-    console.log("Conectou no MySQL!");
-    global.connection = connection;
+    const connection = await mysql.createConnection({
+        host: dataBaseUrl,
+        user: dataBaseUser,
+        password: dataBasePass,
+        database:dataBaseName
+    });
+    console.log("Conectou no MySQL!"); 
+    global.connection = connection; 
     return connection;
 }
-
 
 module.exports = connect;
 ///Diferenca entre sincrono e assincrono: Atividade para Casa

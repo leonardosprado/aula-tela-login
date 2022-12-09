@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "8085:8085"
+    volumes:
+      - ".:/usr/src/app"
+    environment:
+      DATA_BASE_URL: databaseaulalogin
+      MYSQL_USER: "leonardo"
+      MYSQL_PASSWORD: "prado"
+      MYSQL_ROOT_PASSWORD: "prado"
+      MYSQL_DATABASE: "aula_tela_login"
+  database:
+    image: mysql:8.0
+    container_name: databaseaulalogin
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_USER: "leonardo"
+      MYSQL_PASSWORD: "prado"
+      MYSQL_ROOT_PASSWORD: "prado"
+      MYSQL_DATABASE: "aula_tela_login"
+    ports:
+      - "3310:3306"
+
